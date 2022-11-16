@@ -1,4 +1,12 @@
 package com.example.zad3_zhusupova
 
-class CriminalIntentApplication {
+import android.app.Application
+
+class CriminalIntentApplication : Application()
+{
+
+    override fun onCreate() {
+        super.onCreate()
+        CrimeRepository.initialize(this)
+    }
 }
